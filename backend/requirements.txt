@@ -1,0 +1,8 @@
+Flask==3.0.0
+kiteconnect==5.0.1
+pandas
+numpy
+requests==2.31.0
+python-dotenv==1.0.0
+ta-lib==0.4.25
+websocket-client==1.6.1

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Analysis Tool</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Stock Market Analysis Tool</h1>
+        <nav>
+            <button id="nifty-btn" class="nav-btn active">NIFTY</button>
+            <button id="banknifty-btn" class="nav-btn">BANKNIFTY</button>
+            <button id="sensex-btn" class="nav-btn">SENSEX</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="dashboard">
+            <!-- Market Overview -->
+            <section class="market-overview">
+                <h2>Market Overview</h2>
+                <div class="market-cards">
+                    <div class="card" id="nifty-card">
+                        <h3>NIFTY</h3>
+                        <div class="price" id="nifty-price">--</div>
+                        <div class="change" id="nifty-change">--</div>
+                    </div>
+                    <div class="card" id="banknifty-card">
+                        <h3>BANKNIFTY</h3>
+                        <div class="price" id="banknifty-price">--</div>
+                        <div class="change" id="banknifty-change">--</div>
+                    </div>
+                    <div class="card" id="sensex-card">
+                        <h3>SENSEX</h3>
+                        <div class="price" id="sensex-price">--</div>
+                        <div class="change" id="sensex-change">--</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trading Signals -->
+            <section class="signals-section">
+                <h2>Trading Signals</h2>
+                <div class="signal-card" id="signal-card">
+                    <div class="signal-header">
+                        <h3 id="signal-symbol">Loading...</h3>
+                        <div class="signal-direction" id="signal-direction">--</div>
+                    </div>
+                    <div class="signal-details">
+                        <div class="signal-metric">
+                            <span class="label">Entry Price:</span>
+                            <span class="value" id="entry-price">--</span>
+                        </div>
+                        <div class="signal-metric">
+                            <span class="label">Stop Loss:</span>
+                            <span class="value" id="stop-loss">--</span>
+                        </div>
+                        <div class="signal-metric">
+                            <span class="label">Target:</span>
+                            <span class="value" id="target-price">--</span>
+                        </div>
+                        <div class="signal-metric">
+                            <span class="label">Confidence:</span>
+                            <span class="value" id="confidence">--</span>
+                        </div>
+                    </div>
+                    <div class="signal-reasons" id="signal-reasons">
+                        <!-- Reasons will be populated here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Options Analysis -->
+            <section class="options-section">
+                <h2>Options Analysis</h2>
+                <div class="options-analysis">
+                    <div class="analysis-metrics">
+                        <div class="metric">
+                            <span class="label">Market Direction:</span>
+                            <span class="value" id="market-direction">--</span>
+                        </div>
+                        <div class="metric">
+                            <span class="label">Put-Call Ratio:</span>
+                            <span class="value" id="pcr">--</span>
+                        </div>
+                        <div class="metric">
+                            <span class="label">Max Call OI Strike:</span>
+                            <span class="value" id="max-call-oi">--</span>
+                        </div>
+                        <div class="metric">
+                            <span class="label">Max Put OI Strike:</span>
+                            <span class="value" id="max-put-oi">--</span>
+                        </div>
+                    </div>
+                    <div class="recommendations" id="recommendations">
+                        <!-- Recommendations will be populated here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Option Chain -->
+            <section class="option-chain-section">
+                <h2>Option Chain</h2>
+                <div class="option-chain-container">
+                    <div class="option-chain-table" id="option-chain-table">
+                        <div class="loading">Loading...</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Candlestick Chart Modal -->
+            <div id="chart-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3 id="chart-title">Candlestick Chart</h3>
+                    <canvas id="candlestick-chart"></canvas>
+                </div>
+            </div>
+
+            <!-- Technical Indicators -->
+            <section class="indicators-section">
+                <h2>Technical Indicators</h2>
+                <div class="indicators-grid">
+                    <div class="indicator">
+                        <span class="label">RSI:</span>
+                        <span class="value" id="rsi">--</span>
+                    </div>
+                    <div class="indicator">
+                        <span class="label">MACD:</span>
+                        <span class="value" id="macd">--</span>
+                    </div>
+                    <div class="indicator">
+                        <span class="label">SMA 20:</span>
+                        <span class="value" id="sma20">--</span>
+                    </div>
+                    <div class="indicator">
+                        <span class="label">SMA 50:</span>
+                        <span class="value" id="sma50">--</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Stock Market Analysis Tool. For educational purposes only.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
