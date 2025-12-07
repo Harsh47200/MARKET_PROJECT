@@ -134,10 +134,11 @@ start index.html
 open index.html
 
 # Option 3: Run local server (recommended)
-py -m http.server 8000
+py -m http.server --bind 127.0.0.1 8000
 # Or use full path if needed:
-# "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\python.exe" -m http.server 8000
-# Then open http://localhost:8000 in browser
+# "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\python.exe" -m http.server --bind 127.0.0.1 8000
+# Then open http://localhost:8000 or http://127.0.0.1:8000 in browser
+# Note: Using --bind 127.0.0.1 prevents IPv6 address issues
 ```
 
 #### 4. Access the Application
